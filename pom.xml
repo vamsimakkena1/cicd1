@@ -103,10 +103,19 @@
 				<version>2.5.3</version>
 				<configuration>
 					<descriptors>
-						<descriptor>assembly.xml</descriptor>
+						<descriptor>${project.basedir}/assembly.xml</descriptor>
 					</descriptors>
-					<tarLongFileMode>posix</tarLongFileMode>
 				</configuration>
+				
+			<executions>
+                    <execution>
+                        <id>trigger-assembly</id>
+                        <phase>package</phase>
+                        <goals>
+                            <goal>single</goal>
+                        </goals>
+                    </execution>
+                </executions>
 			</plugin>
 			
 
